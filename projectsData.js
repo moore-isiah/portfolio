@@ -12,8 +12,12 @@ const projects = {
     liveLink: null,
     images: [wtHome1, wtHome2, wt1, wt2],
     description:
-      "Submit any Solana wallet or use the pre set whale wallets to track NFT activity such as buys, sells, offers, etc. Uses Magic Eden's V2 API and React Query for obtaining all the data then renders using React components",
-    longDescription: "lots and lots about the wallet tracker",
+      "Submit any Solana wallet or use the pre set whale wallets to track NFT activity such as buys, sells, offers, etc. Uses Magic Eden's V2 API and React Query to obtain all the data with the layout made from React and CSS.",
+    longDescription: [
+      [null, "About", "the. things I would like to say about"],
+      [wt1, "Whale Tracker", "some words about the whale tracker"],
+      [wt2, "Wallet Tracker", "some stuff about the wallet tracker"],
+    ],
     tech: ["Java Script", "React", "React Query", "CSS", "HTML"],
     isBoring: false,
   },

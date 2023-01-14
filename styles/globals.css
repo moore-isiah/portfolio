@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth !important;
+  background-color: #b4acba;
+}
+
 .working {
   @apply text-sm;
 }
@@ -29,11 +34,23 @@
 }
 
 .bg-new-lightpurple {
-  background-color: #b4acba;
+  background-color: #b3a2bc;
 }
 
 .bg-new-darkpurple {
   background-color: #665e72;
+}
+
+.bg-new-grey {
+  background-color: #b4acba;
+}
+
+.border-b-new-darkpurple {
+  border-bottom: 2px solid #665e72;
+}
+
+.border-t-new-darkpurple {
+  border-top: 2px solid #665e72;
 }
 
 .brush {
@@ -59,5 +76,14 @@
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
-  transform: scale(1.08);
+}
+
+.h-slide {
+  opacity: 0;
+  transition-duration: 0.5s ease;
+}
+
+.h-slide.h-active {
+  opacity: 1;
+  transition-duration: 0.5s;
 }

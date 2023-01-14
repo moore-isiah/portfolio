@@ -5,6 +5,7 @@ import arrow from "../public/images/rightArrow.png";
 import Link from "next/link";
 import circle from "../public/images/circle.png";
 import useMediaQuery from "../utils/useMediaQuery";
+import gitIcon from "../public/images/github.png";
 
 export default function ProjectCard(props) {
   const [currentImg, setImg] = useState(0);
@@ -126,36 +127,59 @@ export default function ProjectCard(props) {
           <div className="flex flex-wrap flex-row justify-center">
             {tech.map((name) => {
               return (
-                <p key={name} className="mx-2">
-                  {name}
-                </p>
+                <div
+                  key={name}
+                  className="p-1 bg-new-lightpurple rounded-lg m-1"
+                >
+                  <p className="mx-2 text-new-darkpurple">{name}</p>
+                </div>
               );
             })}
           </div>
         </div>
         <div className="w-full flex flex-col">
           <h1 className="text-new-lightpink">Links:</h1>
-          <div className="ml-2 mb-1">
-            <label htmlFor={gitHub}>Git Hub - </label>
-            <Link href={gitHub} id={gitHub}>
-              {gitHub}
-            </Link>
-          </div>
-          <div className="flex ml-2">
-            <label htmlFor={title}>Live Site - </label>
-            {liveLink ? (
-              <Link href={liveLink} id={title}></Link>
+          <div className="flex flex-wrap flex-col flex-start">
+            <div className=" bg-orange-500 rounded-lg m-1 p-1">
+              <Link href={gitHub} id={gitHub} className="flex">
+                <Image
+                  src={gitIcon}
+                  alt="gitHub"
+                  width={20}
+                  height={20}
+                  className="brush w-5"
+                ></Image>
+                <p className="text-new-darkpurple ml-1">Git Hub</p>
+              </Link>
+            </div>
+            <div className="bg-new-lightpurple rounded-lg m-1">
+              {liveLink ? (
+                <div className="bg-new-lightpurple rounded-lg m-1">
+                  <Link href={liveLink} id={title}>
+                    Go To Site
+                  </Link>
+                </div>
+              ) : (
+                <div className="bg-new-lightpurple rounded-lg m-1 ">
+                  <p className="ml-1 text-new-darkpurple">Not Hosted</p>
+                </div>
+              )}
+            </div>
+            {!isBoring ? (
+              <div className="bg-new-lightpurple rounded-lg m-1 p-1">
+                <Link
+                  href={`/projects/${slug}`}
+                  className="ml-2 text-new-darkpurple"
+                >
+                  Additional Info...
+                </Link>
+              </div>
             ) : (
-              <p className="ml-1"> Not Hosted</p>
+              <div className="bg-new-lightpurple rounded-lg m-1 p-1">
+                <p className="text-new-darkpurple ml-1">No Additional Info</p>
+              </div>
             )}
           </div>
-          {!isBoring ? (
-            <Link href={`/projects/${slug}`} className="ml-2">
-              Additional Info...
-            </Link>
-          ) : (
-            <p className="ml-2">No Additional Info</p>
-          )}
         </div>
       </div>
     </div>
