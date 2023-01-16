@@ -35,7 +35,7 @@ export default function ProjectCard(props) {
   console.log();
   return (
     <div
-      className="max-w-sm border-2 flex flex-col items-center justify-start py-2 bg-new-darkpurple rounded-lg mb-5 "
+      className="max-w-sm flex flex-col items-center justify-start py-2 bg-new-darkpurple rounded-lg mb-5"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -65,7 +65,7 @@ export default function ProjectCard(props) {
                 {currentImg === index && (
                   <img
                     src={img.src}
-                    key={img.src}
+                    key={`${img.src}${index}`}
                     alt="some img"
                     className="z-10 w-full m-0 rounded-lg self-center"
                     onMouseDown={() => {
@@ -96,7 +96,7 @@ export default function ProjectCard(props) {
           currentImg === index ? (
             <Image
               src={circle.src}
-              key={index}
+              key={`circle${index}`}
               alt="current"
               width={10}
               height={10}
@@ -105,7 +105,7 @@ export default function ProjectCard(props) {
           ) : (
             <Image
               src={circle.src}
-              key={index}
+              key={`circle${index}`}
               alt="others"
               width={10}
               height={10}
@@ -128,7 +128,7 @@ export default function ProjectCard(props) {
             {tech.map((name) => {
               return (
                 <div
-                  key={name}
+                  key={`69${name}`}
                   className="p-1 bg-new-lightpurple rounded-lg m-1"
                 >
                   <p className="mx-2 text-new-darkpurple">{name}</p>

@@ -14,9 +14,31 @@ const projects = {
     description:
       "Submit any Solana wallet or use the pre set whale wallets to track NFT activity such as buys, sells, offers, etc. Uses Magic Eden's V2 API and React Query to obtain all the data with the layout made from React and CSS.",
     longDescription: [
-      [null, "About", "the. things I would like to say about"],
-      [wt1, "Whale Tracker", "some words about the whale tracker"],
-      [wt2, "Wallet Tracker", "some stuff about the wallet tracker"],
+      [
+        null,
+        null,
+        "Note: Magic Eden's API only supports two requests a second so data may be delayed",
+      ],
+      [
+        null,
+        "About",
+        "Choose any Solana Blockchain wallet and track the NFT transactions of said wallet. Supmit one wallet for in depth transaction history or track up to seven wallets buy and sell transactions. React Query's useInfinateQueary is used to fetch data for the different transaction type containers. One issue is that the object returned from Magic Eden does not contain the full NFT meta data, mainly the Image, so React Query's useQuery is used to get the meta data of each transaction, but will only fetch it if the NFT in said has not showed up in a previous transaction",
+      ],
+      [
+        wt2,
+        "Wallet Tracker",
+        "Enter any wallet and get all the transaction data. (all activity, buys, sells, and offers pending)",
+      ],
+      [
+        wt1,
+        "Whale Tracker",
+        "Use one of the pre-set options or enter your own wallets and information. Store as many options as you like but can only display the buys and sells of up to 7 wallets at a time.",
+      ],
+      [
+        null,
+        "Portfolio Tracker",
+        "Submit any wallet and will take the current NFT holdings and will calculate it's value in total, with Magic Eden's marketplace fees, or fees along with creator royalties. There is also another half where it would look back and calculate the profit earned over a given time span but for now it remains unfinished.",
+      ],
     ],
     tech: ["Java Script", "React", "React Query", "CSS", "HTML"],
     isBoring: false,

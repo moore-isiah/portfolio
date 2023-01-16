@@ -47,7 +47,7 @@ export default function Project() {
   };
 
   return (
-    <div className="w-full h-full bg-new-grey flex flex-col md:grid grid-cols-2 font-unbounded pt-14 overflow-x-hidden">
+    <div className="w-full h-full bg-new-grey flex flex-col md:grid grid-cols-2 font-unbounded pt-14 overflow-x-hidden text-center">
       <Header isHomePage={false} />
       <div
         className="w-full col-start-1 flex flex-col items-center mb-7 mt-0 "
@@ -187,7 +187,7 @@ export default function Project() {
           </div>
         </div>
       </div>
-      <div className="w-full p-2 overflow-y-scroll rounded-lg font-unbounded text-new-darkpurple col-start-2 md:shadow-inner flex flex-col">
+      <div className="w-full h-screen  px-4 overflow-y-scroll rounded-lg font-unbounded text-new-darkpurple col-start-2 shadow-inner flex flex-col">
         {project.longDescription.map((item) => {
           return (
             <>
@@ -199,7 +199,7 @@ export default function Project() {
                 ></Image>
               )}
               {item[1] && <h1 className="text-xl">{item[1]}</h1>}
-              {item[2] && <p>{item[2]}</p>}
+              {item[2] && <p className="my-2">{item[2]}</p>}
             </>
           );
         })}

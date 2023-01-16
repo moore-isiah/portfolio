@@ -1,22 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import images from "../public/images/imgIndex";
 import { useState } from "react";
 
 import ProjectCard from "../components/projectCard";
 import Header from "../components/Header";
+import EmailForm from "../components/EmailForm";
 
 import projectsData from "../projectsData";
 
 export default function Home() {
   const [isClicked, setClicked] = useState(false);
-  const [contact, setContact] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
 
   const [
     saltLake,
@@ -72,9 +66,18 @@ export default function Home() {
           className="z-0 h-48 md:h-auto"
         />
       </div>
-      <div id="about" className="flex flex-col font-unbounded items-center">
-        <h1 className="my-3 text-new-darkpurple text-3xl">About Me</h1>
-        <p className="text-new-darkpurple">words about me</p>
+      <div
+        id="about"
+        className="flex flex-col font-unbounded items-center px-4"
+      >
+        <h1 className="my-3 text-new-darkpurple text-3xl ">About Me</h1>
+        <p className="text-new-darkpurple text-center">
+          I'm a mostly self thought Full Stack Developer. I have a need for
+          knowledge that is supplemented by my ability to self teach and work
+          through unknown issues. I also feel I am very tolerent of annoyances
+          and failures, like debugging and errors, through experienceing the
+          madness of being a youth baseball coach.
+        </p>
       </div>
       <div id="tech" className="flex flex-col items-center">
         {isClicked && (
@@ -98,11 +101,10 @@ export default function Home() {
         </div>
         <div className="flex flex-row flex-wrap justify-around w-full">
           {techIcons.map((item) => {
-            console.log(item.src);
             return (
               // eslint-disable-next-line react/jsx-key
               <Image
-                key={item}
+                key={item.src}
                 src={item}
                 alt=""
                 className="h-10 md:h-16 object-contain w-auto m-3"
@@ -123,69 +125,7 @@ export default function Home() {
           <ProjectCard project={projectsData.memeGen} />
         </div>
       </div>
-      <div
-        id="contact"
-        className="w-full flex flex-col items-center my-5 font-unbounded"
-      >
-        <h1 className="text-new-darkpurple text-3xl justify-self-center">
-          Contact
-        </h1>
-        <div className="md:w-1/2 lg:w-1/2 sm:w-full flex justify-center items-center flex-wrap">
-          <label htmlFor="first" className="text-new-darkpurple text-lg">
-            First Name:
-          </label>
-          <input
-            id="first"
-            type="text"
-            className="rounded-sm bg-new-darkpurple p-1 ml-2 text-new-lightpurple my-2"
-            placeholder="john"
-            value={contact.firstName}
-            onChange={(e) => {
-              setContact({ ...contact, firstName: e.target.value });
-            }}
-          />
-          <label htmlFor="last" className="text-new-darkpurple ml-4 text-lg">
-            Last Name:
-          </label>
-          <input
-            id="last"
-            type="text"
-            className="rounded-sm bg-new-darkpurple p-1 ml-2 text-new-lightpurple my-2"
-            placeholder="doe"
-            value={contact.lastName}
-            onChange={(e) => {
-              setContact({ ...contact, lastName: e.target.value });
-            }}
-          />
-          <label htmlFor="email" className="text-new-darkpurple ml-4 text-lg">
-            Email:
-          </label>
-          <input
-            id="email"
-            type="email"
-            className="rounded-sm bg-new-darkpurple p-1 text-new-lightpurple md:w-10/12 lg:w-10/12 my-2 ml-2 sm:w-full"
-            placeholder="johndoe@gmail.com"
-            value={contact.email}
-            onChange={(e) => {
-              setContact({ ...contact, email: e.target.value });
-            }}
-          />
-          <div className="flex flex-col w-full items-center">
-            <h1 className="text-new-darkpurple text-lg text-center w-full">
-              Message:
-            </h1>
-            <textarea
-              type="textbox"
-              id="message"
-              value={contact.message}
-              onChange={(e) => {
-                setContact({ ...contact, message: e.target.value });
-              }}
-              className="rounded-sm bg-new-darkpurple p-1 text-new-lightpurple w-3/4 h-44 ml-2 my-2"
-            />
-          </div>
-        </div>
-      </div>
+      <EmailForm />
     </div>
   );
 }
