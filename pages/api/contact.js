@@ -27,7 +27,7 @@ export default async function handler(req, res) {
     console.log(details);
 
     try {
-      transporter.sendMail(details);
+      await transporter.sendMail(details);
       return res.status(200).json({ success: true });
     } catch (err) {
       console.log(err);

@@ -6,5 +6,6 @@ export default async function submitMail(data) {
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json", Accept: "application/json" },
   });
+
   return send.ok;
 }
