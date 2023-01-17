@@ -72,7 +72,7 @@ export default function Home() {
       >
         <h1 className="my-3 text-new-darkpurple text-3xl ">About Me</h1>
         <p className="text-new-darkpurple text-center">
-          I'm a mostly self thought Full Stack Developer. I have a need for
+          I&apos;m a mostly self thought Full Stack Developer. I have a need for
           knowledge that is supplemented by my ability to self teach and work
           through unknown issues. I also feel I am very tolerent of annoyances
           and failures, like debugging and errors, through experienceing the
