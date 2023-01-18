@@ -87,3 +87,13 @@ html {
   opacity: 1;
   transition-duration: 0.5s;
 }
+
+.bar {
+  transition: 4.75s linear;
+  -webkit-transition: 4.75s linear;
+}
+
+.activeBar {
+  transform: translateX(-150%);
+  -webkit-transform: translateX(-100%);
+}

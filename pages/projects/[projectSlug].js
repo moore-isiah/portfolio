@@ -187,7 +187,7 @@ export default function Project() {
           </div>
         </div>
       </div>
-      <div className="w-full h-screen  px-4 overflow-y-scroll rounded-lg font-unbounded text-new-darkpurple col-start-2 shadow-inner flex flex-col">
+      <div className="w-full h-auto lg:h-screen  px-4 overflow-y-scroll rounded-lg font-unbounded text-new-darkpurple col-start-2 shadow-inner flex flex-col">
         {project.longDescription.map((item) => {
           return (
             <>

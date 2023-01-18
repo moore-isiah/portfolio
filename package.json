@@ -10,6 +10,7 @@
     "build:css": "tailwind build styles/global.css -o pages/_app.js"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "next": "13.0.6",

@@ -3,13 +3,44 @@ import React, { useState } from "react";
 import submitMail from "../utils/submitMail";
 
 export default function EmailForm() {
+  const [goodToast, setToast] = useState("badEmail");
+  const [isActiveToast, setActiveToast] = useState(true);
   const [contact, setContact] = useState({
     firstName: "",
     lastName: "",
     email: "",
     message: "",
-    subject: "subject",
+    subject: "",
   });
+
+  const resetToast = () => {
+    setActiveToast(false);
+    setToast(null);
+  };
+
+  const handleSubmit = async () => {
+    const emailRegex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    setActiveToast(true);
+
+    if (!emailRegex.test(contact.email)) {
+      setTimeout(() => setToast("badEmail"), 100);
+      setTimeout(() => {
+        resetToast();
+      }, 5000);
+      return null;
+    }
+    try {
+      let click = await submitMail(contact);
+      click ? setToast("sent") : setToast("err");
+      setTimeout(() => {
+        resetToast();
+      }, 5000);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div
@@ -59,7 +90,7 @@ export default function EmailForm() {
           <input
             id="email"
             type="email"
-            className="rounded-sm bg-new-darkpurple p-1 text-new-lightpurple md:w-10/12 lg:w-10/12 my-2 ml-2 sm:w-full"
+            className="rounded-sm bg-new-darkpurple p-1 text-new-lightpurple w-3/4 md:w-10/12 lg:w-10/12 my-2 ml-2"
             placeholder="johndoe@gmail.com"
             value={contact.email}
             autoComplete="off"
@@ -75,7 +106,7 @@ export default function EmailForm() {
           <input
             id="subject"
             type="text"
-            className="rounded-sm bg-new-darkpurple p-1 ml-2 text-new-lightpurple my-2"
+            className="rounded-sm bg-new-darkpurple p-1 ml-2 w-3/4 text-new-lightpurple my-2"
             placeholder="doe"
             value={contact.subject}
             autoComplete="off"
@@ -101,12 +132,50 @@ export default function EmailForm() {
           />
         </div>
         <button
-          onClick={() => submitMail(contact)}
+          onClick={handleSubmit}
           className="bg-new-darkpurple p-1 text-new-lightpink rounded-lg"
         >
           Submit
         </button>
       </div>
+      {isActiveToast && (
+        <div className="w-screen h-screen flex justify-center items-center z-50 fixed top-0 left-0 font-unbounded">
+          <div className="bg-new-darkpurple text-new-lightpurple flex justify-between items-center flex-col h-32 w-60 rounded-xl overflow-hidden">
+            <div
+              className="w-full h-5 flex justify-end pr-2 cursor-pointer className='font-serif"
+              onClick={resetToast}
+            >
+              X
+            </div>
+            {!goodToast ? (
+              <h1>Sending...</h1>
+            ) : goodToast == "sent" ? (
+              <div className="text-center">
+                <h1>Email Sent</h1>
+                <h1>Successfully</h1>
+              </div>
+            ) : goodToast == "badEmail" ? (
+              <div className="text-center">
+                <h1>Invalid Email</h1>
+                <h1>Please Resubmit</h1>
+              </div>
+            ) : (
+              <div className="text-center">
+                <h1>Error</h1>
+                <h1>Failed To Send</h1>
+              </div>
+            )}
+            <div
+              className={`h-5 justify-self-end w-full bar ${
+                !goodToast ? "" : "activeBar"
+              }`}
+            >
+              <div className="w-full h-full block float-left bg-new-lightpink"></div>
+              <div className="w-full h-full block float-left bg-new-darkpurple"></div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
