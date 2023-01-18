@@ -74,9 +74,9 @@ export default function Home() {
         <p className="text-new-darkpurple text-center">
           I&apos;m a mostly self thought Full Stack Developer. I have a need for
           knowledge that is supplemented by my ability to self teach and work
-          through unknown issues. I also feel I am very tolerent of annoyances
-          and failures, like debugging and errors, through experienceing the
-          madness of being a youth baseball coach.
+          through unknown issues. I&apos;m also very tolerent of setbacks, such
+          as debugging or errors, through experiences in both playing and
+          coaching sports.
         </p>
       </div>
       <div id="tech" className="flex flex-col items-center">
