@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import submitMail from "../utils/submitMail";
 
 export default function EmailForm() {
-  const [goodToast, setToast] = useState("badEmail");
-  const [isActiveToast, setActiveToast] = useState(true);
+  const [goodToast, setToast] = useState(null);
+  const [isActiveToast, setActiveToast] = useState(false);
   const [contact, setContact] = useState({
     firstName: "",
     lastName: "",
