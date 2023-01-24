@@ -46,7 +46,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-new-grey w-full h-full">
+    <div className="bg-new-grey w-full h-full flex items-center flex-col">
       <Header isHomePage={true} />
       <div className="w-full flex h-full items-center justify-center">
         <div className="absolute block w-full ml-1/4 h-16 md:h-56 z-20">
@@ -68,18 +68,19 @@ export default function Home() {
       </div>
       <div
         id="about"
-        className="flex flex-col font-unbounded items-center px-4"
+        className="flex flex-col font-unbounded items-center px-4 lg:w-3/4"
       >
         <h1 className="my-3 text-new-darkpurple text-3xl ">About Me</h1>
-        <p className="text-new-darkpurple text-center">
-          I&apos;m a mostly self thought Full Stack Developer. I have a need for
-          knowledge that is supplemented by my ability to self teach and work
-          through unknown issues. I&apos;m also very tolerent of setbacks, such
-          as debugging or errors, through experiences in both playing and
-          coaching sports.
+        <p className="text-new-darkpurple text-center lg:text-xl">
+          I&apos;m a mostly self thought Full Stack Developer with a strong
+          sense of business and entrepreneurship. Through trying to build small
+          businesses I self taught many skills and work through problems I
+          didn&apos;t know. I&apos;m also very tolerant of these setbacks, like
+          debugging errors, through experiences in both playing and coaching
+          sports at a high level.
         </p>
       </div>
-      <div id="tech" className="flex flex-col items-center">
+      <div id="tech" className="flex flex-col items-center w-full">
         {isClicked && (
           <div className="absolute w-72 h-auto bg-new-darkpurple p-2 mt-16 rounded-lg">
             <p className="font-unbounded text-new-grey">

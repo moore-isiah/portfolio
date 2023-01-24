@@ -15,11 +15,23 @@ export default function Header(props) {
   const links = (
     <div className="z-40">
       <Link
+        href={isHomePage ? "#about" : "/#about"}
+        className="ml-5 font-unbounded bg-new-darkpurple p-1 rounded-sm text-new-lightpink"
+      >
+        About Me
+      </Link>
+      <Link
         href={isHomePage ? "#projects" : "/#projects"}
-        className="font-unbounded bg-new-darkpurple p-1 rounded-sm text-new-lightpink"
+        className="font-unbounded bg-new-darkpurple p-1 rounded-sm text-new-lightpink ml-5"
         scrollSmooth
       >
         Projects
+      </Link>
+      <Link
+        href={isHomePage ? "#contact" : "/#contact"}
+        className="ml-5 font-unbounded bg-new-darkpurple p-1 rounded-sm text-new-lightpink"
+      >
+        Contact
       </Link>
       <Link
         href="/resume"
@@ -27,18 +39,6 @@ export default function Header(props) {
         target="_blank"
       >
         Resume
-      </Link>
-      <Link
-        href={isHomePage ? "#about" : "/#about"}
-        className="ml-5 font-unbounded bg-new-darkpurple p-1 rounded-sm text-new-lightpink"
-      >
-        About Me
-      </Link>
-      <Link
-        href={isHomePage ? "#contact" : "/#contact"}
-        className="ml-5 font-unbounded bg-new-darkpurple p-1 rounded-sm text-new-lightpink"
-      >
-        Contact
       </Link>
     </div>
   );
@@ -93,19 +93,10 @@ export default function Header(props) {
           onClick={() => setActive(false)}
         >
           <Link
-            href={isHomePage ? "#projects" : "/#projects"}
+            href={isHomePage ? "#about" : "/#about"}
             className="font-unbounded"
-            scrollSmooth
           >
-            Projects
-          </Link>
-        </div>
-        <div
-          className="border-b-new-darkpurple py-2 text-center text-new-lightpink bg-new-grey w-full text-4xl"
-          onClick={() => setActive(false)}
-        >
-          <Link href="/resume" className="font-unbounded" target="_blank">
-            Resume
+            About Me
           </Link>
         </div>
         <div
@@ -113,10 +104,11 @@ export default function Header(props) {
           onClick={() => setActive(false)}
         >
           <Link
-            href={isHomePage ? "#about" : "/#about"}
+            href={isHomePage ? "#projects" : "/#projects"}
             className="font-unbounded"
+            scrollSmooth
           >
-            About Me
+            Projects
           </Link>
         </div>
         <div
@@ -129,6 +121,14 @@ export default function Header(props) {
             className="font-unbounded"
           >
             Contact
+          </Link>
+        </div>
+        <div
+          className="border-b-new-darkpurple py-2 text-center text-new-lightpink bg-new-grey w-full text-4xl"
+          onClick={() => setActive(false)}
+        >
+          <Link href="/resume" className="font-unbounded" target="_blank">
+            Resume
           </Link>
         </div>
       </div>
