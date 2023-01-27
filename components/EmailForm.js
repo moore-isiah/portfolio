@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+import linkedIcon from "../public/images/linkedin.png";
+import gitIcon from "../public/images/github.png";
 
 import submitMail from "../utils/submitMail";
 
@@ -50,6 +55,31 @@ export default function EmailForm() {
       <h1 className="text-new-darkpurple text-3xl justify-self-center">
         Contact
       </h1>
+      <div className="flex">
+        <div className="w-8 h-8 bg-new-darkpurple ml-3 flex justify-center items-center rounded-lg">
+          <Link href="https://www.linkedin.com/in/isiah-moore/" target="_blank">
+            <Image
+              src={linkedIcon.src}
+              alt="linkedIn"
+              width={30}
+              height={30}
+              className="filter-lightpink rounded w-6 h-6"
+            />
+          </Link>
+        </div>
+
+        <div className="w-8 h-8 bg-new-darkpurple ml-3 flex justify-center items-center rounded-lg">
+          <Link href="https://github.com/moore-isiah" target="_blank">
+            <Image
+              src={gitIcon.src}
+              alt="github"
+              width={23}
+              height={23}
+              className="filter-lightpink rounded w-6 h-6"
+            />
+          </Link>
+        </div>
+      </div>
       <div className="md:w-1/2 lg:w-1/2 sm:w-full flex justify-center items-center flex-wrap">
         <div className="flex flex-col w-full items-center md:w-1/2">
           <label htmlFor="first" className="text-new-darkpurple text-lg">

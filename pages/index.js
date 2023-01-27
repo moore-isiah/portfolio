@@ -62,6 +62,7 @@ export default function Home() {
         </div>
         <Image
           src={saltLake}
+          priority
           alt="image of Salt Lake City"
           className="z-0 h-48 md:h-auto"
         />
@@ -75,9 +76,9 @@ export default function Home() {
           I&apos;m a mostly self thought Full Stack Developer with a strong
           sense of business and entrepreneurship. Through trying to build small
           businesses I self taught many skills and work through problems I
-          didn&apos;t know. I&apos;m also very tolerant of these setbacks, like
-          debugging errors, through experiences in both playing and coaching
-          sports at a high level.
+          didn&apos;t know. I&apos;m also very confident in my resolve and
+          ablility to work with setbacks, like debugging errors, through
+          experiences in both playing and coaching sports at a high level.
         </p>
       </div>
       <div id="tech" className="flex flex-col items-center w-full">
