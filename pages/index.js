@@ -28,6 +28,7 @@ export default function Home() {
     nodeIcon,
     expressIcon,
     reactQueryIcon,
+    gitIcon,
   ] = images;
 
   const techIcons = [
@@ -38,6 +39,7 @@ export default function Home() {
     reactQueryIcon,
     htmlIcon,
     nextIcon,
+    gitIcon,
     mongoIcon,
     mongooseIcon,
     reduxIcon,
@@ -124,6 +126,7 @@ export default function Home() {
         </h1>
         <div className="w-full flex justify-around flex-wrap ">
           <ProjectCard project={projectsData.walletTracker} />
+          <ProjectCard project={projectsData.portfolio} />
           <ProjectCard project={projectsData.memeGen} />
         </div>
       </div>

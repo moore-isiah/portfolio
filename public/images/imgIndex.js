@@ -13,6 +13,7 @@ import nodeIcon from "./node.png";
 import reduxIcon from "./redux.png";
 import expressIcon from "./express.png";
 import reactQueryIcon from "./react-query.svg";
+import gitIcon from "./gitIcon.png";
 
 const images = [
   saltLake,
@@ -30,6 +31,7 @@ const images = [
   reduxIcon,
   expressIcon,
   reactQueryIcon,
+  gitIcon,
 ];
 
 export default images;

@@ -67,7 +67,7 @@ export default function ProjectCard(props) {
                     src={img.src}
                     key={`${img.src}${index}`}
                     alt="some img"
-                    className="z-10 w-full m-0 rounded-lg self-center"
+                    className="z-10 w-full h-36 m-0 rounded-lg self-center"
                     onMouseDown={() => {
                       handleRightClick();
                     }}
@@ -141,22 +141,24 @@ export default function ProjectCard(props) {
           <h1 className="text-new-lightpink">Links:</h1>
           <div className="flex flex-wrap flex-col flex-start">
             <div className=" bg-orange-500 rounded-lg m-1 p-1">
-              <Link href={gitHub} id={gitHub} className="flex">
+              <Link href={gitHub} id={gitHub} className="flex" target="_blank">
                 <Image
                   src={gitIcon}
                   alt="gitHub"
                   width={20}
                   height={20}
-                  className="brush w-5"
+                  className="brush w-6 h-fit"
                 ></Image>
-                <p className="text-new-darkpurple ml-1">Git Hub</p>
+                <p className="text-new-darkpurple ml-1">
+                  {gitHub ? "Git Hub" : "Please Request Access Below"}
+                </p>
               </Link>
             </div>
             <div className="bg-new-lightpurple rounded-lg m-1">
               {liveLink ? (
                 <div className="bg-new-lightpurple rounded-lg m-1">
-                  <Link href={liveLink} id={title}>
-                    Go To Site
+                  <Link href={liveLink} id={title} target="_blank">
+                    <p className="text-new-darkpurple ml-1">{title}</p>
                   </Link>
                 </div>
               ) : (
@@ -169,7 +171,7 @@ export default function ProjectCard(props) {
               <div className="bg-new-lightpurple rounded-lg m-1 p-1">
                 <Link
                   href={`/projects/${slug}`}
-                  className="ml-2 text-new-darkpurple"
+                  className="ml-1 text-new-darkpurple"
                 >
                   Additional Info...
                 </Link>

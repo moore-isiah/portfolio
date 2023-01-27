@@ -3,6 +3,7 @@ import wtHome2 from "./public/images/wt-home-2.png";
 import wt1 from "./public/images/wt1.png";
 import wt2 from "./public/images/walletTracker.png";
 import memeGenImg from "./public/images/meme-generator.png";
+import portlofio from "./public/images/portfolio.png";
 
 const projects = {
   walletTracker: {
@@ -42,6 +43,19 @@ const projects = {
     ],
     tech: ["Java Script", "React", "React Query", "CSS", "HTML"],
     isBoring: false,
+  },
+
+  portfolio: {
+    title: "isiahm.dev",
+    slug: "portfolio",
+    gitHub: "",
+    liveLink: "https://isiahm.dev/",
+    images: [portlofio],
+    description:
+      "This is the project I used to familiarize myself Tailwind CSS and Next JS. I looked back at old projects to reviewed old code to learn which areas I need to improve in and in which areas I have already improved.",
+    longDescription: "",
+    tech: ["Next JS", "Tailwind CSS", "Java Script", "React"],
+    isBoring: true,
   },
 
   memeGen: {
