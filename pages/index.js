@@ -82,12 +82,11 @@ export default function Home() {
       >
         <h1 className="my-3 text-new-darkpurple text-3xl ">About Me</h1>
         <p className="text-new-darkpurple text-center lg:text-xl">
-          I&apos;m a mostly self thought Full Stack Developer with a strong
-          sense of business and entrepreneurship. Through trying to build small
+          I&apos;m a mostly self taught Full Stack Developer with a strong sense
+          of business and entrepreneurship. Through trying to build small
           businesses I self taught many skills and work through problems I
-          didn&apos;t know. I&apos;m also very confident in my resolve and
-          ablility to work with setbacks, like debugging errors, through
-          experiences in both playing and coaching sports at a high level.
+          didn&apos;t know. I can also break down complex topics and explain
+          them in more simple terms from experiences coaching baseball.
         </p>
       </div>
       <div id="tech" className="flex flex-col items-center w-full">
