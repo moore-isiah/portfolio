@@ -6,7 +6,10 @@ export default async function submitMail(data) {
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json", Accept: "application/json" },
   });
-  console.log(send.json());
+
+  const message = await send.json();
+
+  console.log(message);
 
   return send.ok;
 }
