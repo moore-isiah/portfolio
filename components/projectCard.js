@@ -67,7 +67,7 @@ export default function ProjectCard(props) {
                     src={img.src}
                     key={`${img.src}${index}`}
                     alt="some img"
-                    className="z-10 w-full h-36 m-0 rounded-lg self-center"
+                    className="z-10 w-full h-36 m-0 rounded-lg self-center object-contain"
                     onMouseDown={() => {
                       handleRightClick();
                     }}

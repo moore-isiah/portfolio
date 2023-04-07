@@ -131,6 +131,7 @@ export default function Home() {
           Projects
         </h1>
         <div className="w-full flex justify-around flex-wrap ">
+          <ProjectCard project={projectsData.nizhoniBeadWork} />
           <ProjectCard project={projectsData.walletTracker} />
           <ProjectCard project={projectsData.portfolio} />
           <ProjectCard project={projectsData.memeGen} />

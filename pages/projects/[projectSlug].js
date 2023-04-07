@@ -166,11 +166,13 @@ export default function Project() {
             </Link>
           </div>
           <div className="bg-new-darkpurple rounded-lg m-2 p-1">
+            {console.log(project.liveLink)}
+
             {project.liveLink ? (
               <div>
                 <Link
-                  href={liveLink}
-                  id={title}
+                  href={project.liveLink}
+                  id={project.title}
                   className="text-2xl text-new-lightpink mx-2"
                   target="_blank"
                 >

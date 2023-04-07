@@ -7,6 +7,7 @@ import useMediaQuery from "../utils/useMediaQuery";
 import hamburgerIcon from "../public/images/hamburger.png";
 import linkedIcon from "../public/images/linkedin.png";
 import gitIcon from "../public/images/github.png";
+import DropdownMenu from "./DropDown";
 
 export default function Header(props) {
   const [isActive, setActive] = useState(false);
@@ -42,22 +43,6 @@ export default function Header(props) {
       >
         Resume
       </Link>
-    </div>
-  );
-
-  const hamburger = (
-    <div>
-      <Image
-        src={hamburgerIcon.src}
-        alt="hamburger itcon"
-        width="40"
-        height="40"
-        className="brush"
-        onClick={() => {
-          console.log("clicked", isActive);
-          setActive(!isActive);
-        }}
-      />
     </div>
   );
 
@@ -103,66 +88,8 @@ export default function Header(props) {
           </div>
         </div>
 
-        {isSmall ? hamburger : links}
+        {isSmall ? <DropdownMenu isHomePage={isHomePage} /> : links}
       </header>
-
-      <div
-        className={`flex fixed flex-col h-0 w-screen bg-new-grey ${
-          isActive ? "h-slide h-active h-full z-50" : "h-slide -z-40"
-        } ${isHomePage ? "mt-12" : ""}`}
-      >
-        <div
-          className="border-b-new-darkpurple border-t-new-darkpurple bg-new-grey py-2 text-center text-new-lightpink w-full text-4xl"
-          onClick={() => setActive(false)}
-        >
-          <Link href="/" className="font-unbounded">
-            Home
-          </Link>
-        </div>
-        <div
-          className="border-b-new-darkpurple py-2 text-center text-new-lightpink bg-new-grey w-full text-4xl"
-          onClick={() => setActive(false)}
-        >
-          <Link
-            href={isHomePage ? "#about" : "/#about"}
-            className="font-unbounded"
-          >
-            About Me
-          </Link>
-        </div>
-        <div
-          className="border-b-new-darkpurple py-2 text-center text-new-lightpink bg-new-grey w-full text-4xl"
-          onClick={() => setActive(false)}
-        >
-          <Link
-            href={isHomePage ? "#projects" : "/#projects"}
-            className="font-unbounded"
-            scrollSmooth
-          >
-            Projects
-          </Link>
-        </div>
-        <div
-          className="border-b-new-darkpurple py-2 text-center text-new-lightpink bg-new-grey w-full text-4xl"
-          onClick={() => setActive(false)}
-        >
-          {" "}
-          <Link
-            href={isHomePage ? "#contact" : "/#contact"}
-            className="font-unbounded"
-          >
-            Contact
-          </Link>
-        </div>
-        <div
-          className="border-b-new-darkpurple py-2 text-center text-new-lightpink bg-new-grey w-full text-4xl"
-          onClick={() => setActive(false)}
-        >
-          <Link href="/resume" className="font-unbounded" target="_blank">
-            Resume
-          </Link>
-        </div>
-      </div>
     </>
   );
 }

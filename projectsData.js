@@ -4,8 +4,64 @@ import wt1 from "./public/images/wt1.png";
 import wt2 from "./public/images/walletTracker.png";
 import memeGenImg from "./public/images/meme-generator.png";
 import portlofio from "./public/images/portfolio.png";
+import nizhoni1 from "./public/images/nizhoni1.png";
+import nizhoni2 from "./public/images/nizhoni2.png";
+import nizhoni3 from "./public/images/nizhoni3.png";
+import nizhoni4 from "./public/images/nizhoni4.png";
+import nizhoni5 from "./public/images/nizhoni5.png";
 
 const projects = {
+  nizhoniBeadWork: {
+    title: "www.nizhonibeadwork.com",
+    slug: "nizhoni-beadwork",
+    gitHub: "",
+    liveLink: "https://www.nizhonibeadwork.com",
+    images: [nizhoni1, nizhoni2, nizhoni3, nizhoni4, nizhoni5],
+    description:
+      "While still a work in progress, this is my most ambitious project to date. This site uses Square's SDK to process many ecommerce operations such as creating and storing user profiles, products and their data (can be done in /admin/createProduct), order data, process monetary transactions through calls to it's API. As of now it is mobile responsive through stying in Tailwind CSS.",
+    longDescription: [
+      [
+        null,
+        "About",
+        "While still a work in progress, this is my most ambitious project to date. This site uses Square's SDK to process many ecommerce operations such as creating and storing user profiles, products and their data (can be done in /admin/createProduct), order data, process monetary transactions through calls to it's API. As of now it is mobile responsive through stying in Tailwind CSS.",
+      ],
+      [
+        nizhoni1,
+        "Home Page - /",
+        "The landing page at the top shows a carousel cyciling through 5 images followed immediatly by the four most recently created products and information about custom work. Both are accompanied by links to thier own respective pages.",
+      ],
+      [
+        nizhoni2,
+        "Cart Page - /cart",
+        "The cart and it's total monetary value are tracked using Redux Toolkit and displayed with totals and options to change the carts contents. With many of the products being made to order if their is already existing stock in a given size and prodect the 'instant ship' property shows in the cart that there is no wait time because it is already made. When checkout is created the customer is then send to a Square hosted checkout page to complete and capture their payment.",
+      ],
+      [
+        nizhoni3,
+        "Custom Work Page - /custom",
+        "This page is a form used to submit a request for custom work to be done, Uses NodeMailer to send the seller an email, where the customer and seller settle details about the order. The seller can then send the customer a Square checkout link.",
+      ],
+      [
+        nizhoni4,
+        "Shop Page - /shop",
+        "A shop page that displays all the products and can filter through product data/catagorys like colors and styles.",
+      ],
+      [
+        nizhoni5,
+        "Create Product Page - /admin/createProduct",
+        "A page where the seller can edit or create product data and upload it's accompanying pictures.",
+      ],
+    ],
+    tech: [
+      "Next JS",
+      "Tailwind CSS",
+      "Java Script",
+      "React",
+      "Redux Toolkit",
+      "Square SDK",
+      "NodeMailer",
+    ],
+    isBoring: false,
+  },
   walletTracker: {
     title: "Solana Wallet Tracker",
     slug: "wallet-tracker",
@@ -54,7 +110,7 @@ const projects = {
     description:
       "This is the project I used to familiarize myself Tailwind CSS and Next JS. I looked back at old projects to reviewed old code to learn which areas I need to improve in and in which areas I have already improved.",
     longDescription: "",
-    tech: ["Next JS", "Tailwind CSS", "Java Script", "React"],
+    tech: ["Next JS", "Tailwind CSS", "Java Script", "React, NodeMailer"],
     isBoring: true,
   },
 
