@@ -121,7 +121,6 @@ export default function EmailForm() {
             id="email"
             type="email"
             className="rounded-sm bg-new-darkpurple p-1 text-new-lightpurple w-3/4 md:w-10/12 lg:w-10/12 my-2 ml-2"
-            placeholder="johndoe@gmail.com"
             value={contact.email}
             autoComplete="off"
             onChange={(e) => {
@@ -137,7 +136,6 @@ export default function EmailForm() {
             id="subject"
             type="text"
             className="rounded-sm bg-new-darkpurple p-1 ml-2 w-3/4 text-new-lightpurple my-2"
-            placeholder="doe"
             value={contact.subject}
             autoComplete="off"
             onChange={(e) => {
