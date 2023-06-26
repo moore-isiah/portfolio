@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+Sure! Here's an updated version of the README file based on the information you provided:
 
-First, run the development server:
+Portfolio App
+This is a simple portfolio app built using Next.js. It showcases your projects, skills, and provides information about you.
 
-```bash
+Prerequisites
+Before running the app, make sure you have the following software installed on your machine:
+
+Node.js (v14.0.0 or later)
+npm (v6.0.0 or later)
+Getting Started
+To get started with the app, follow these steps:
+
+Clone the repository to your local machine using the following command:
+
+bash
+Copy code
+git clone https://github.com/moore-isiah/portfolio
+Navigate to the project directory:
+
+bash
+Copy code
+cd portfolio
+Install the dependencies using npm:
+
+Copy code
+npm install
+Run the app in development mode:
+
+arduino
+Copy code
 npm run dev
-# or
-yarn dev
-```
+This will start the development server and you can view the app by opening http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Building for Production
+To build the app for production, use the following command:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+arduino
+Copy code
+npm run build
+This will create an optimized production build of the app.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+To start the production server, use the following command:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+arduino
+Copy code
+npm run start
+This will start the production server and you can view the app by opening http://localhost:3000 in your browser.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+License
+This project is licensed under the MIT License.
