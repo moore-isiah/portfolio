@@ -16,14 +16,14 @@ const projects = {
     slug: "nizhoni-beadwork",
     gitHub: "",
     liveLink: "https://www.nizhonibeadwork.com",
-    images: [nizhoni1, nizhoni2, nizhoni3, nizhoni4, nizhoni5],
+    images: [nizhoni1, nizhoni2, nizhoni3, nizhoni4],
     description:
-      "While still a work in progress, this is my most ambitious project to date. This site uses Square's SDK to process many ecommerce operations such as creating and storing user profiles, products and their data (can be done in /admin/createProduct), order data, process monetary transactions through calls to it's API. As of now it is mobile responsive through stying in Tailwind CSS.",
+      "This site uses Square's SDK to process many ecommerce operations such as creating and storing user profiles, products and their data (can be done in /admin/createProduct), order data, process monetary transactions through calls to it's API. As of now it is mobile responsive through stying in Tailwind CSS.",
     longDescription: [
       [
         null,
         "About",
-        "While still a work in progress, this is my most ambitious project to date. This site uses Square's SDK to process many ecommerce operations such as creating and storing user profiles, products and their data (can be done in /admin/createProduct), order data, process monetary transactions through calls to it's API. As of now it is mobile responsive through stying in Tailwind CSS.",
+        "This site uses Square's SDK to process many ecommerce operations such as creating and storing user profiles, products and their data (can be done in /admin/createProduct), order data, process monetary transactions through calls to it's API. As of now it is mobile responsive through stying in Tailwind CSS.",
       ],
       [
         nizhoni1,
@@ -44,11 +44,6 @@ const projects = {
         nizhoni4,
         "Shop Page - /shop",
         "A shop page that displays all the products and can filter through product data/catagorys like colors and styles.",
-      ],
-      [
-        nizhoni5,
-        "Create Product Page - /admin/createProduct",
-        "A page where the seller can edit or create product data and upload it's accompanying pictures.",
       ],
     ],
     tech: [
